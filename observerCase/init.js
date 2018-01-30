@@ -9,15 +9,15 @@ let office = {}; //定义售楼处
 
 office.clientList = []; //缓存列表
 
-office.listen = (fn) => {   //增加订阅者方法
+office.listen = fn => {   //增加订阅者方法
   office.clientList.push(fn); //订阅消息存入缓存列表
 }
 
 //发布消息
-office.trigger = () => {
+office.trigger = (...rest) => {
   for (let i=0; i < office.clientList.length; i++) {
     let fn = office.clientList[i];
-    fn();
+    fn(...rest);
   }
 }
 
