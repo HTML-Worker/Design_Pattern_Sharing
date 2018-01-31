@@ -5,7 +5,7 @@ let myImage = (() => {
 
   return {
     setSrc: (src) => {
-      myImage.setSrc('../../imgs/loadImg.jpg');
+      myImage.setSrc('./imgs/loadImg.jpg');
       imgNode.src = src;
     }
   }
