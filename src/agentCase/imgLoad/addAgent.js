@@ -1,4 +1,5 @@
 //引入 proxyImage 对象，在图片加载之前，页面将出现一张占位图片
+//符合单一职责原则、开放封闭原则
 
 let myImage = (() => {
   let imgNode = document.createElement('img');
